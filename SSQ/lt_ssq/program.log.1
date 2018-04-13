@@ -1,0 +1,19 @@
+三月 01, 2018 1:22:15 下午 net.sourceforge.tessboxeditor.BoxEditorController readImageFile
+严重: I/O error reading header!
+javax.imageio.IIOException: I/O error reading header!
+	at com.github.jaiimageio.impl.plugins.tiff.TIFFImageReader.readHeader(TIFFImageReader.java:215)
+	at com.github.jaiimageio.impl.plugins.tiff.TIFFImageReader.locateImage(TIFFImageReader.java:222)
+	at com.github.jaiimageio.impl.plugins.tiff.TIFFImageReader.getNumImages(TIFFImageReader.java:270)
+	at net.sourceforge.tess4j.util.ImageIOHelper.getImageList(Unknown Source)
+	at net.sourceforge.tessboxeditor.BoxEditorController.readImageFile(Unknown Source)
+	at net.sourceforge.tessboxeditor.BoxEditorController$5.call(Unknown Source)
+	at net.sourceforge.tessboxeditor.BoxEditorController$5.call(Unknown Source)
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1423)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.io.EOFException
+	at javax.imageio.stream.ImageInputStreamImpl.readShort(Unknown Source)
+	at javax.imageio.stream.ImageInputStreamImpl.readUnsignedShort(Unknown Source)
+	at com.github.jaiimageio.impl.plugins.tiff.TIFFImageReader.readHeader(TIFFImageReader.java:190)
+	... 9 more
+
